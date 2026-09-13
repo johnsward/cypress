@@ -15,6 +15,12 @@ export default defineConfig({
     devServer: {
       framework: "react",
       bundler: "vite",
+      viteConfig: {
+        server: {
+          port: 5175,
+          strictPort: true,
+        },
+      },
     },
   },
 });
