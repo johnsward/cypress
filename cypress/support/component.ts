@@ -16,7 +16,10 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+// @ts-expect-error CSS side-effect imports are handled by the Cypress bundler.
 import '../../src/index.css'
+
+// @ts-expect-error CSS side-effect imports are handled by the Cypress bundler.
 import '../../src/App.css'
 
 import { mount } from 'cypress/react'
