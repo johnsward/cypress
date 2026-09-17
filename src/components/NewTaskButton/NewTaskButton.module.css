@@ -1,4 +1,4 @@
-.new-task-btn {
+.newTaskButton {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -13,11 +13,11 @@
   transition: background 0.15s;
 }
 
-.new-task-btn:hover {
+.newTaskButton:hover {
   background: #4338ca;
 }
 
-.new-task-btn svg {
+.newTaskButton svg {
   width: 16px;
   height: 16px;
 }

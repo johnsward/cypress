@@ -1,5 +1,5 @@
-import { PlusIcon } from "lucide-react"
-import "./NewTaskButton.css"
+
+import styles from "./NewTaskButton.module.css"
 
 interface NewTaskButtonProps {
   onClick: () => void
@@ -7,8 +7,7 @@ interface NewTaskButtonProps {
 
 function NewTaskButton({ onClick }: NewTaskButtonProps) {
   return (
-    <button type="button" data-cy="new-task-button" className="new-task-btn" onClick={onClick}>
-      <PlusIcon />
+    <button type="button" data-cy="new-task-button" className={styles.newTaskButton} onClick={onClick}>
       New Task
     </button>
   )

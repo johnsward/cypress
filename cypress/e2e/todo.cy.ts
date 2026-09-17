@@ -3,7 +3,7 @@ describe('Todo app', () => {
     cy.visit('/')
     cy.get('[data-cy=todo-item]').should('have.length', 3)
     cy.get('[data-cy=todo-text]').should('contain', 'Present Cypress demo')
-    cy.get('[data-cy=todo-item].completed').should('have.length', 1)
+    cy.get('[data-cy=todo-item][data-completed=true]').should('have.length', 1)
   })
 
   describe('with an empty list', () => {
@@ -32,7 +32,7 @@ describe('Todo app', () => {
     it('toggles a todo as completed', () => {
       cy.addTodo('Buy milk')
       cy.get('[data-cy=todo-toggle]').check()
-      cy.get('[data-cy=todo-item]').should('have.class', 'completed')
+      cy.get('[data-cy=todo-item]').should('have.attr', 'data-completed', 'true')
       cy.get('[data-cy=todo-count]').should('contain', '0 item(s) left')
     })
 
