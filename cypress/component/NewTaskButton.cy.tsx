@@ -1,4 +1,4 @@
-import NewTaskButton from '../../src/components/NewTaskButton'
+import NewTaskButton from '../../src/components/NewTaskButton/NewTaskButton'
 
 describe('<NewTaskButton />', () => {
   it('renders the "New Task" label', () => {

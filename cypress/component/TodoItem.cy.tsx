@@ -1,4 +1,4 @@
-import TodoItem from '../../src/components/TodoItem'
+import TodoItem from '../../src/components/TodoItem/TodoItem'
 
 describe('<TodoItem />', () => {
   const todo = { id: 1, text: 'Buy milk', completed: false }
@@ -7,13 +7,13 @@ describe('<TodoItem />', () => {
     cy.mount(<TodoItem todo={todo} onToggle={cy.stub()} onDelete={cy.stub()} />)
     cy.get('[data-cy=todo-text]').should('have.text', 'Buy milk')
     cy.get('[data-cy=todo-toggle]').should('not.be.checked')
-    cy.get('[data-cy=todo-item]').should('not.have.class', 'completed')
+    cy.get('[data-cy=todo-item]').should('have.attr', 'data-completed', 'false')
   })
 
   it('renders a completed todo with strikethrough styling', () => {
     cy.mount(<TodoItem todo={{ ...todo, completed: true }} onToggle={cy.stub()} onDelete={cy.stub()} />)
     cy.get('[data-cy=todo-toggle]').should('be.checked')
-    cy.get('[data-cy=todo-item]').should('have.class', 'completed')
+    cy.get('[data-cy=todo-item]').should('have.attr', 'data-completed', 'true')
   })
 
   it('calls onToggle with the todo id when the checkbox is clicked', () => {

@@ -1,4 +1,4 @@
-.todo-item {
+.todoItem {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -7,24 +7,24 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
-.todo-item:last-child {
+.todoItem:last-child {
   border-bottom: none;
 }
 
-.todo-item.completed {
+.todoItem.completed {
   background: #fafafa;
 }
 
-.todo-item.completed .todo-text {
+.todoItem.completed .todoText {
   text-decoration: line-through;
   color: #9ca3af;
 }
 
-.todo-text {
+.todoText {
   flex: 1;
 }
 
-.todo-checkbox {
+.todoCheckbox {
   appearance: none;
   width: 20px;
   height: 20px;
@@ -37,12 +37,12 @@
   place-content: center;
 }
 
-.todo-checkbox:checked {
+.todoCheckbox:checked {
   border-color: #4f46e5;
   background: #4f46e5;
 }
 
-.todo-checkbox:checked::after {
+.todoCheckbox:checked::after {
   content: '';
   width: 7px;
   height: 4px;
@@ -51,7 +51,7 @@
   transform: rotate(-45deg) translateY(-0.5px);
 }
 
-.todo-delete-btn {
+.todoDeleteBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -65,12 +65,12 @@
   transition: background 0.15s, color 0.15s;
 }
 
-.todo-delete-btn svg {
+.todoDeleteBtn svg {
   width: 16px;
   height: 16px;
 }
 
-.todo-delete-btn:hover {
+.todoDeleteBtn:hover {
   background: rgba(239, 68, 68, 0.1);
   color: #ef4444;
 }

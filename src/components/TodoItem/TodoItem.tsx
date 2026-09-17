@@ -1,4 +1,4 @@
-import './TodoItem.css'
+import styles from './TodoItem.module.css'
 
 export interface Todo {
   id: number
@@ -14,20 +14,24 @@ interface TodoItemProps {
 
 function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
   return (
-    <li data-cy="todo-item" className={`todo-item${todo.completed ? ' completed' : ''}`}>
+    <li
+      data-cy="todo-item"
+      data-completed={todo.completed}
+      className={`${styles.todoItem}${todo.completed ? ` ${styles.completed}` : ''}`}
+    >
       <input
         type="checkbox"
         data-cy="todo-toggle"
-        className="todo-checkbox"
+        className={styles.todoCheckbox}
         checked={todo.completed}
         onChange={() => onToggle(todo.id)}
       />
-      <span data-cy="todo-text" className="todo-text">
+      <span data-cy="todo-text" className={styles.todoText}>
         {todo.text}
       </span>
       <button
         data-cy="todo-delete"
-        className="todo-delete-btn"
+        className={styles.todoDeleteBtn}
         aria-label="Delete todo"
         onClick={() => onDelete(todo.id)}
       >

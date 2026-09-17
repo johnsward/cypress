@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
-import TodoItem, { type Todo } from './components/TodoItem'
-import NewTaskButton from './components/NewTaskButton'
+import TodoItem, { type Todo } from './components/TodoItem/TodoItem'
+import NewTaskButton from './components/NewTaskButton/NewTaskButton'
 
 const initialTodos: Todo[] = [
   { id: 1, text: 'Present Cypress demo', completed: false },
