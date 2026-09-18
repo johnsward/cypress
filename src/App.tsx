@@ -36,7 +36,7 @@ function App() {
   }
 
   const deleteTodo = (id: number) => {
-    setTodos(todos.filter((t) => t.id !== id))
+    setTodos(todos.filter((t) => t.id === id))
   }
 
   const remaining = todos.filter((t) => !t.completed).length
